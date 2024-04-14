@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.prev-btn, .next-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn img, .next-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.day {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.day.active {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 16px;
+}
+
+.time-slot {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workout {
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.workout h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.workout p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.add-workout {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.add-btn {
+  background-color: #2196f3;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-btn img {
+  width: 24px;
+  height: 24px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <button class="prev-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M10.205 12.456A.5.5 0 0 0 10.5 12V4a.5.5 0 0 0-.832-.374l-4.5 4a.5.5 0 0 0 0 .748l4.5 4a.5.5 0 0 0 .537.082"/>
+              </svg>
+          </button>
+          <h1>Workout Schedule</h1>
+          <button class="next-btn">
+            <img src="arrow-right.svg" alt="Next">
+          </button>
+        </div>
+        <div class="calendar">
+          <div class="day">
+            <h2>Sun</h2>
+            <p>5</p>
+          </div>
+          <div class="day active">
+            <h2>Mon</h2>
+            <p>6</p>
+          </div>
+          <div class="day">
+            <h2>Tue</h2>
+            <p>7</p>
+          </div>
+          <div class="day">
+            <h2>Wed</h2>
+            <p>8</p>
+          </div>
+          <div class="day">
+            <h2>Thu</h2>
+            <p>9</p>
+          </div>
+        </div>
+        <div class="schedule">
+          <div class="time-slot">
+            <p>06:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>07:00 AM</p>
+            <div class="workout">
+              <h3>Ab Workout</h3>
+              <p>7:30am</p>
+            </div>
+          </div>
+          <div class="time-slot">
+            <p>08:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>09:00 AM</p>
+            <div class="workout">
+              <h3>Upperbody Workout</h3>
+              <p>9am</p>
+            </div>
+          </div>
+          <div class="time-slot">
+            <p>10:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>11:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>12:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>01:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>02:00 AM</p>
+            <div class="workout">
+              <h3>Lowerbody Workout</h3>
+              <p>3pm</p>
+            </div>
+          </div>
+          <div class="time-slot">
+            <p>03:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>04:00 AM</p>
+          </div>
+          <div class="time-slot">
+            <p>05:00 AM</p>
+          </div>
+        </div>
+        <div class="add-workout">
+          <button class="add-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+              </svg>
+          </button>
+        </div>
+      </div>
+</body>
+</html>

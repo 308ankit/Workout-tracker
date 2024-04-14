@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Page</title>
+    
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create an account</h2>
+        <form id="registration">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">By proceeding. I agree to all T&C and privacy policy</label>
+            <input type="button" value="Create an account" onclick="register()">
+            
+        </form><br>
+        <div class="centered-images">
+            <img src="images/google.jpeg" height="25px" width="25px">&nbsp;&nbsp;
+            <img src="images/facebook.png" height="25px" width="25px">
+        </div>
+        <p>Already have an account? <a href="login.html" >Login</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

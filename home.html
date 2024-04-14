@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Fitness Goals</title>
+</head>
+<body>
+    <h1>What are your goals?</h1>
+    <form id="goal-form" method="post">
+        <div class="col-md-9 bg-light p-3">
+            
+            <div>
+                <input type="checkbox" id="weight-loss" name="goals[]" value="Weight Loss">
+                <label for="weight-loss">Weight Loss</label>
+            </div><br>
+            <div>
+                <input type="checkbox" id="muscle-gain" name="goals[]" value="Muscle Gain">
+                <label for="muscle-gain">Muscle Gain</label>
+            </div><br>
+            <div>
+                <input type="checkbox" id="flexibility" name="goals[]" value="Flexibility and Mobility">
+                <label for="flexibility">Flexibility and Mobility</label>
+            </div><br>
+            <div>
+                <input type="checkbox" id="general-fitness" name="goals[]" value="General Fitness">
+                <label for="general-fitness">General Fitness</label>
+            </div><br>
+            <div>
+                <input type="checkbox" id="event-training" name="goals[]" value="Event specific training">
+                <label for="event-training">Event specific training</label>
+            </div><br>
+            <div>
+                <input type="checkbox" id="mindfulness" name="goals[]" value="Mindfulness and Mental Health">
+                <label for="mindfulness">Mindfulness and Mental Health</label>
+            </div><br>
+        </div>
+        <input type="button" value="Confirm" onclick="redirectToTracker()">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
